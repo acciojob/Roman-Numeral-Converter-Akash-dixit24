@@ -1,4 +1,6 @@
 function convertToRoman(num) {
+  num = Number(num);
+
   if (num === 0) return "";
 
   const symbols = [
@@ -28,3 +30,7 @@ function convertToRoman(num) {
 
   return result;
 }
+
+
+
+alert(convertToRoman(number));
