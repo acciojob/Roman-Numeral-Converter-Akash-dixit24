@@ -15,9 +15,12 @@ function convertToRoman(num) {
         ['I', 1]
     ];
 
-    let result = '';
+    let result = "";
 
-    for (let [symbol, value] of romanNumerals) {
+    for (let i = 0; i < romanNumerals.length; i++) {
+        let symbol = romanNumerals[i][0];
+        let value = romanNumerals[i][1];
+
         while (num >= value) {
             result += symbol;
             num -= value;
