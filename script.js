@@ -15,17 +15,16 @@ function convertToRoman(num) {
         ['I', 1]
     ];
 
-    let result = "";
+    let roman = "";
 
     for (let i = 0; i < romanNumerals.length; i++) {
-        let symbol = romanNumerals[i][0];
-        let value = romanNumerals[i][1];
-
-        while (num >= value) {
-            result += symbol;
-            num -= value;
+        while (num >= romanNumerals[i][1]) {
+            roman += romanNumerals[i][0];
+            num -= romanNumerals[i][1];
         }
     }
 
-    return result;
+    return roman;
 }
+
+window.convertToRoman = convertToRoman;
